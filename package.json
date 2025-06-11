@@ -1,0 +1,53 @@
+{
+  "name": "discord-music-bot",
+  "version": "1.0.0",
+  "description": "A Discord music bot using discord.js and discord-player",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:optimized": "node --max-old-space-size=512 --optimize-for-size --gc-interval=100 --expose-gc src/index.js",
+    "start:production": "NODE_ENV=production node --max-old-space-size=512 --optimize-for-size src/index.js",
+    "dev": "nodemon src/index.js",
+    "dev:optimized": "nodemon --max-old-space-size=512 --expose-gc src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "clear-commands": "node src/clear-commands.js",
+    "list-commands": "node src/list-commands.js",
+    "health-check": "node -e \"console.log('Memory:', process.memoryUsage()); console.log('Uptime:', process.uptime(), 'seconds');\"",
+    "build": "node build.js",
+    "build:nexe": "node build-nexe.js"
+  },
+  "keywords": [
+    "discord",
+    "music",
+    "bot",
+    "discord.js",
+    "discord-player"
+  ],
+  "author": "YourName",
+  "license": "ISC",
+  "dependencies": {
+    "@discord-player/extractor": "^4.4.5",
+    "@discordjs/builders": "^1.7.0",
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/rest": "^2.2.0",
+    "@discordjs/voice": "0.18.0",
+    "axios": "^1.9.0",
+    "discord-api-types": "^0.37.83",
+    "discord-player": "^6.6.4",
+    "discord-player-youtubei": "^1.4.6",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "ffmpeg-static": "^5.2.0",
+    "mediaplex": "^1.0.0",
+    "play-dl": "^1.9.7",
+    "sodium-native": "^4.1.1",
+    "youtubei.js": "^13.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  }
+}

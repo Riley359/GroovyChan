@@ -1,0 +1,15 @@
+{
+  "name": "discord-music-bot",
+  "bin": "src/index.js",
+  "pkg": {
+    "assets": [
+      "src/**/*",
+      "node_modules/**/*",
+      ".env"
+    ],
+    "targets": [
+      "node16-win-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
